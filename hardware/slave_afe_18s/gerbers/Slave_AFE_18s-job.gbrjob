@@ -5,19 +5,19 @@
       "Application": "Pcbnew",
       "Version": "10.0.1"
     },
-    "CreationDate": "2026-08-18T00:08:34+05:00"
+    "CreationDate": "2026-08-18T00:17:20+05:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "Slave_AFE_18s",
       "GUID": "536c6176-655f-4414-9645-5f3138732e6b",
-      "Revision": "v1.0"
+      "Revision": "rev?"
     },
     "Size": {
-      "X": 120.15,
-      "Y": 85.15
+      "X": 140.15,
+      "Y": 90.15
     },
-    "LayerNumber": 4,
+    "LayerNumber": 2,
     "BoardThickness": 1.6,
     "Finish": "None"
   },
@@ -26,13 +26,8 @@
       "Layers": "Outer",
       "PadToPad": 0.2,
       "PadToTrack": 0.2,
-      "TrackToTrack": 0.2
-    },
-    {
-      "Layers": "Inner",
-      "PadToPad": 0.2,
-      "PadToTrack": 0.2,
-      "TrackToTrack": 0.2
+      "TrackToTrack": 0.2,
+      "MinLineWidth": 0.3
     }
   ],
   "FilesAttributes": [
@@ -42,18 +37,8 @@
       "FilePolarity": "Positive"
     },
     {
-      "Path": "Slave_AFE_18s-GND_PLANE.g1",
-      "FileFunction": "Copper,L2,Inr",
-      "FilePolarity": "Positive"
-    },
-    {
-      "Path": "Slave_AFE_18s-PWR_PLANE.g2",
-      "FileFunction": "Copper,L3,Inr",
-      "FilePolarity": "Positive"
-    },
-    {
       "Path": "Slave_AFE_18s-B_Cu.gbl",
-      "FileFunction": "Copper,L4,Bot",
+      "FileFunction": "Copper,L2,Bot",
       "FilePolarity": "Positive"
     },
     {
@@ -113,34 +98,10 @@
     },
     {
       "Type": "Dielectric",
-      "Thickness": 0.48,
+      "Thickness": 1.51,
       "Material": "FR4",
-      "Name": "F.Cu/GND_PLANE",
-      "Notes": "Type: dielectric layer 1 (from F.Cu to GND_PLANE)"
-    },
-    {
-      "Type": "Copper",
-      "Thickness": 0.035,
-      "Name": "GND_PLANE"
-    },
-    {
-      "Type": "Dielectric",
-      "Thickness": 0.48,
-      "Material": "FR4",
-      "Name": "GND_PLANE/PWR_PLANE",
-      "Notes": "Type: dielectric layer 2 (from GND_PLANE to PWR_PLANE)"
-    },
-    {
-      "Type": "Copper",
-      "Thickness": 0.035,
-      "Name": "PWR_PLANE"
-    },
-    {
-      "Type": "Dielectric",
-      "Thickness": 0.48,
-      "Material": "FR4",
-      "Name": "PWR_PLANE/B.Cu",
-      "Notes": "Type: dielectric layer 3 (from PWR_PLANE to B.Cu)"
+      "Name": "F.Cu/B.Cu",
+      "Notes": "Type: dielectric layer 1 (from F.Cu to B.Cu)"
     },
     {
       "Type": "Copper",
