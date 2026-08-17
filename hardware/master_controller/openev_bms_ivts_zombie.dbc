@@ -1,0 +1,63 @@
+VERSION ""
+
+NS_ :
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BMS ZOMBIE_VCU IVTS_SENSOR INVERTER CHARGER
+
+BO_ 1313 IVTS_Current: 8 IVTS_SENSOR
+ SG_ IVTS_Current_mA : 16|32@1- (1,0) [-1000000|1000000] "mA" BMS,ZOMBIE_VCU
+ SG_ IVTS_Current_MsgCount : 0|8@1+ (1,0) [0|255] "" BMS
+
+BO_ 1314 IVTS_Voltage1: 8 IVTS_SENSOR
+ SG_ IVTS_Voltage_U1_mV : 16|32@1- (1,0) [0|1000000] "mV" BMS,ZOMBIE_VCU
+
+BO_ 1315 IVTS_Voltage2: 8 IVTS_SENSOR
+ SG_ IVTS_Voltage_U2_mV : 16|32@1- (1,0) [0|1000000] "mV" BMS,ZOMBIE_VCU
+
+BO_ 1319 IVTS_CoulombCount: 8 IVTS_SENSOR
+ SG_ IVTS_Charge_As : 16|32@1- (1,0) [-2147483648|2147483647] "As" BMS
+
+BO_ 1712 Orion_PackSummary: 8 BMS
+ SG_ Pack_Current : 0|16@1- (0.1,0) [-1000|1000] "A" ZOMBIE_VCU,INVERTER
+ SG_ Pack_Inst_Voltage : 16|16@1+ (0.1,0) [0|1000] "V" ZOMBIE_VCU,INVERTER
+ SG_ Pack_SOC : 32|8@1+ (0.5,0) [0|100] "%" ZOMBIE_VCU,INVERTER
+ SG_ Discharge_Limit_DCL : 40|16@1+ (1,0) [0|1500] "A" ZOMBIE_VCU,INVERTER
+ SG_ Charge_Limit_CCL : 56|8@1+ (1,0) [0|250] "A" ZOMBIE_VCU,CHARGER
+
+BO_ 60 Orion_CellExtremes: 8 BMS
+ SG_ High_Cell_Voltage : 0|16@1+ (0.001,0) [0|5] "V" ZOMBIE_VCU
+ SG_ Low_Cell_Voltage : 16|16@1+ (0.001,0) [0|5] "V" ZOMBIE_VCU
+ SG_ High_Cell_Temp : 32|8@1- (1,-40) [-40|120] "degC" ZOMBIE_VCU
+ SG_ Low_Cell_Temp : 40|8@1- (1,-40) [-40|120] "degC" ZOMBIE_VCU
+ SG_ Relay_State : 48|8@1+ (1,0) [0|255] "" ZOMBIE_VCU
+ SG_ DTC_Flags : 56|8@1+ (1,0) [0|255] "" ZOMBIE_VCU
