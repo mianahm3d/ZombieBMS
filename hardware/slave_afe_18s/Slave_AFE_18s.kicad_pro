@@ -1,0 +1,28 @@
+{
+  "board": {
+    "design_settings": {
+      "rules": {
+        "min_clearance": 0.15,
+        "min_track_width": 0.2,
+        "min_via_annular_width": 0.15,
+        "min_via_diameter": 0.6,
+        "min_hole_to_hole": 0.25
+      }
+    }
+  },
+  "meta": {
+    "filename": "Slave_AFE_18s.kicad_pro",
+    "version": 1
+  },
+  "schematic": {
+    "drawing": {
+      "default_line_thickness": 0.15
+    }
+  },
+  "sheets": [
+    [
+      "9b3c4f72-881a-4e2b-a192-3c1e7a9b0001",
+      ""
+    ]
+  ]
+}
